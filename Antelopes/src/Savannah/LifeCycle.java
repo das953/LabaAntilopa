@@ -31,7 +31,7 @@ public class LifeCycle {
 
         }
 
-        System.out.println("All died on " + day + "day");
+        System.out.println("\nAll died on " + day + "day");
     }
 
     private boolean IsThereNextDay(){
