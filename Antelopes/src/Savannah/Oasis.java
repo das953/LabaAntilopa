@@ -11,8 +11,15 @@ public class Oasis {
         this.oasisWater = oasisCapacity;
     }
 
-    public long WaterOnNextDay(int dayNumber){
-        return RainyDay(11, dayNumber, oasisWater) ? (oasisWater+=1000000000) : oasisWater;
+    void WaterOnNextDay(int dayNumber){
+        boolean isRain = RainyDay(11, dayNumber, oasisWater);
+        if (isRain) {
+            oasisWater += 1000000000;
+        }
+        System.out.println("On "
+                + dayNumber
+                + (isRain ? " day it was raining." : " day there was no rain.")
+                + " At the end of day oasis has " + oasisWater + " liters of water.");
     }
 
     private static void TestProbabilityFormula(){
@@ -42,19 +49,14 @@ public class Oasis {
     }
 
     private static boolean RainyDay(int rainPercentage, int dayNumber, long oasisWater){
-        boolean isRain = new Random().nextInt(100 / rainPercentage) == 0;
-        System.out.println("On "
-                + dayNumber
-                + (isRain ? " it was raining." : " there was no rain.")
-                + " Now oasis has " + oasisWater + " liters of water");
-        return isRain;
+        return  new Random().nextInt(100 / rainPercentage) == 0;
     }
 
-    public void setOasisWater(long oasisWater) {
+    void setOasisWater(long oasisWater) {
         this.oasisWater = oasisWater;
     }
 
-    public long getOasisWater() {
+    long getOasisWater() {
         return oasisWater;
     }
 }

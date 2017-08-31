@@ -6,8 +6,8 @@ import java.util.List;
 
 public class LifeCycle {
 
-    Herd herds;
-    Oasis oasis;
+    private Herd herds;
+    private Oasis oasis;
 
     public LifeCycle(Herd herds, Oasis oasis) {
         this.herds = herds;
@@ -24,7 +24,7 @@ public class LifeCycle {
             day++;
             nextDay(day);
 
-            System.out.println("Herds size is: ");
+            System.out.println("On begin of day herds size is: ");
             for (IDrinkable herd  : herds.getHerds()){
                 System.out.printf(herd.getHerdCount() + " | ");
             }
