@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Antelopes/Antelopes.iml" filepath="$PROJECT_DIR$/Antelopes/Antelopes.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LabaAntilopa.iml" filepath="$PROJECT_DIR$/.idea/LabaAntilopa.iml" />
     </modules>
   </component>
